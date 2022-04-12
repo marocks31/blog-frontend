@@ -29,17 +29,11 @@ export default {
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
+            {{ post.body }}
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <router-link class="btn btn-primary" v-bind:to="`/posts/${post.id}`">Show more Info</router-link>
         </div>
       </div>
-      <h2>{{ post.name }}</h2>
-      <img v-bind:src="post.image" v-bind:alt="post.name" />
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.body }}</p>
-      <p>{{ post.image }}</p>
-      <router-link v-bind:to="`/posts/${post.id}`">Show more Info</router-link>
     </div>
   </div>
 </template>
