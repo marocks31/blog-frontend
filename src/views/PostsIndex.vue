@@ -4,6 +4,7 @@ export default {
   data: function () {
     return {
       posts: [],
+      currentPost: {},
     };
   },
   created: function () {
@@ -24,7 +25,14 @@ export default {
   <div class="posts-index">
     <h1>All Posts</h1>
     <div v-for="post in posts" v-bind:key="post.id">
-      <div class="card" style="width: 18rem">
+      <div
+        class="card"
+        style="width: 18rem"
+        v-bind:class="{ selected: post === currentPost }"
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-on:click="currentPost = post"
+      >
         <img v-bind:src="post.image" class="card-img-top" alt="" />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -37,3 +45,14 @@ export default {
     </div>
   </div>
 </template>
+
+<style>
+h1 {
+  color: rgb(92, 182, 92);
+  font-size: 30px;
+}
+
+.selected .card-body {
+  background-color: rgb(242, 208, 214);
+}
+</style>
