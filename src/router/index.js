@@ -7,6 +7,7 @@ import LoginView from "../views/LoginView.vue";
 import PostsNew from "../views/PostsNew.vue";
 import PostShow from "../views/PostShow.vue";
 import PostsEdit from "../views/PostsEdit.vue";
+import LogoutView from "../views/LogoutView.vue";
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: "/posts/:id/edit",
     name: "/posts-edit",
     component: PostsEdit,
+  },
+  {
+    path: "/logout",
+    name: "/logout",
+    component: LogoutView,
   },
 ];
 

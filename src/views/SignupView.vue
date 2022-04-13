@@ -42,10 +42,16 @@ export default {
       <div>
         <label>Password:</label>
         <input type="password" v-model="newUserParams.password" />
+        <small v-if="newUserParams?.password?.length > 0 && newUserParams?.password?.length < 6" class="text-danger">
+          Password must be longer than 6 characters.
+        </small>
       </div>
       <div>
         <label>Password confirmation:</label>
         <input type="password" v-model="newUserParams.password_confirmation" />
+        <small v-if="newUserParams.password !== newUserParams.password_confirmation" class="text-danger">
+          Password confirmation should match password.
+        </small>
       </div>
       <input type="submit" value="Submit" />
     </form>

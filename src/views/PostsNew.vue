@@ -41,6 +41,10 @@ export default {
       <div>
         Body
         <input type="text" v-model="newPostParams.body" />
+        <small v-if="newPostParams?.body?.length > 0 && newPostParams?.body?.length <= 80">
+          Remaining characters: {{ 80 - newPostParams?.body?.length }}
+        </small>
+        <small v-if="newPostParams?.body?.length > 80" class="text-danger">Post can't be over 80 characters.</small>
       </div>
       <div>
         Image
