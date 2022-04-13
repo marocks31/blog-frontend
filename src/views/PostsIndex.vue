@@ -48,8 +48,9 @@ export default {
 
 <style>
 h1 {
-  color: rgb(92, 182, 92);
+  color: rgb(127, 164, 127);
   font-size: 30px;
+  font-family: "Unlock", cursive;
 }
 
 .selected .card-body {
