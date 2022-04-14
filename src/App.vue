@@ -15,6 +15,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-family: 'Rubik Moonrocks', cursive; font-size: 2em">Blople</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -83,6 +84,11 @@ export default {
 </script>
 
 <style>
+.nav-brand {
+  font-family: "Rubik Moonrocks", cursive;
+  font-size: 24px;
+  font-weight: 700;
+}
 body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png");
 }
